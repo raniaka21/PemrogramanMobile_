@@ -1,0 +1,33 @@
+class Laptop {
+  // Fields
+  String merk;
+  double harga;
+
+  // Constructor dengan this keyword
+  Laptop(this.merk, this.harga);
+
+  // Method pertama
+  void spesifikasi(String prosesor, int ram, String tipePenyimpanan) {
+    print('Merk Laptop: $merk');
+    print('Harga: Rp$harga juta');
+    print('Prosesor: $prosesor');
+    print('RAM: ${ram}GB');
+    print('Tipe Penyimpanan: $tipePenyimpanan');
+  }
+
+  // Method kedua
+  void cekKetersediaan(String toko, int stok, String garansi) {
+    print('Toko: $toko');
+    print('Stok Tersedia: $stok unit');
+    print('Garansi: $garansi');
+  }
+}
+
+void main() {
+  // Membuat objek dari kelas Laptop
+  var laptop1 = Laptop('Dell', 15.0);
+
+  // Memanggil method
+  laptop1.spesifikasi('Intel i7', 16, 'SSD');
+  laptop1.cekKetersediaan('Tokopedia', 10, '1 Tahun');
+}
